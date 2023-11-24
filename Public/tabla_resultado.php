@@ -132,78 +132,88 @@ for ($i = $primerPeriodo; $i <= $ultimoPeriodo; $i++) {
 ?>
 
 <div class="tabla">
-    <h1>Resulatos MPS</h1>
+    <h1>Tabla de Resulatos (MPS)</h1>
+
     <div class="datosEntrada">
-        <h2>Inventario Inicial</h2>
-        <p><?php echo $inventarioInicial; ?></p>
+        <div class="inventario-inicial1">Inventario Inicial</div>
+        <div class="inventario-inicial2"><?php echo $inventarioInicial; ?></div>
     </div>
+
     <div class="datosEntrada">
-        <h2>Tamaño del Lote <br> Producción por periodo</h2>
-        <p><?php echo $lote; ?></p>
+        <div class="lote1">Tamaño del Lote <br> Producción por periodo</div>
+        <div class="lote2"><?php echo $lote; ?></div>
     </div>
-    <table border="1">
+
+    <table>
         <tr>
             <th>Mensual</th>
             <?php for ($i = $mesInicio; $i <= $mesFinal; $i++) { ?>
-                <th><?php echo $meses[$i] ?></th>
+                <th class="tipo-periodo"><?php echo $meses[$i] ?></th>
             <?php } ?>
         </tr>
         <tr>
-            <td>Inventario Inicial</td>
+            <td class="periodos">Inventario Inicial</td>
             <?php 
-            // $invIni = $mesInicio;
-            for ($i = $primerPeriodo; $i <= $ultimoPeriodo; $i++) { ?>
-                <td><?php echo ($i == $primerPeriodo) ? $inventarioInicial : $arrayInvFinal[$i - 2]; ?></td>
+            for ($i = $primerPeriodo; $i <= $ultimoPeriodo; $i++) { 
+                $style1 = ($i == $primerPeriodo) ? 'invenInicial' : '';
+                $inventario = ($i == $primerPeriodo) ? $inventarioInicial : $arrayInvFinal[$i - 2];
+                ?>
+                <td class="numeros" id="<?php echo $style1; ?>"><?php echo $inventario; ?></td>
             <?php } ?>
         </tr>
         <tr>
-            <td>Pronósticos</td>
+            <td class="periodos">Pronósticos</td>
             <?php for ($i = 0; $i < count($pronosticos); $i++) { ?>
-                <td><?php echo $pronosticos[$i] ?></td>
+                <td class="numeros"><?php echo $pronosticos[$i] ?></td>
             <?php } ?>
         </tr>
         <tr>
-            <td>Pedidos</td>
+            <td class="periodos">Pedidos</td>
             <?php for ($i = 0; $i < count($pedidos); $i++) { ?>
-                <td><?php echo $pedidos[$i] ?></td>
+                <td class="numeros"><?php echo $pedidos[$i] ?></td>
             <?php } ?>
         </tr>
         <tr>
-            <td>MPS/PMP</td>
-            <?php for ($i = $primerPeriodo; $i <= $ultimoPeriodo; $i++) { ?>
-                <td><?php echo $arrayMPS[$i - 1] ?></td>
+            <td class="periodos">MPS/PMP</td>
+            <?php for ($i = $primerPeriodo; $i <= $ultimoPeriodo; $i++) { 
+                $style = ($arrayMPS[$i - 1] == 0) ? 'mps0' : 'mps1';
+                ?>
+                <td class="numeros <?php echo $style; ?>"><?php echo $arrayMPS[$i - 1] ?></td>
             <?php } ?>
         </tr>
         <tr>
-            <td>Inventario Final</td>
+            <td class="periodos">Inventario Final</td>
             <?php for ($i = $primerPeriodo; $i <= $ultimoPeriodo; $i++) { ?>
-                <td><?php echo $arrayInvFinal[$i - 1] ?></td>
+                <td class="numeros"><?php echo $arrayInvFinal[$i - 1] ?></td>
             <?php } ?>
         </tr>
         <tr>
-            <td>DPP</td>
-            <?php for ($i = $primerPeriodo; $i <= $ultimoPeriodo; $i++) { ?>
-                <td><?php echo $arrayDPP[$i - 1]; ?></td>
+            <td class="periodos">DPP</td>
+            <?php for ($i = $primerPeriodo; $i <= $ultimoPeriodo; $i++) { 
+                $styleDpp = ($arrayDPP[$i - 1] == '')? 'mps0' : '';
+                ?>
+                <td class="numeros <?php echo $styleDpp; ?>"><?php echo $arrayDPP[$i - 1]; ?></td>
             <?php } ?>
         </tr>
     </table>
-
-
-
-    <div class="pronosticos">Pronósticos</div>
-    <table border="1">
-    <tr>
-        <th>Mensual</th> 
-        <th>Cantidad</th>
-        <th>Pedidos</th>  
-    </tr>
-    <?php for ($i = $mesInicio, $j = 0; $i <= $mesFinal; $i++, $j++) { ?>
-        <tr>
-            <td><?php echo $meses[$i] ?></td>
-            <td><?php echo $pronosticos[$j] ?></td>
-            <td><?php echo $pedidos[$j] ?></td>
-        </tr>
-    <?php } ?>
-</table>
-
 </div>
+
+
+<div class="periodos-pedidos">
+    <div class="pronosticos">Pronósticos</div>
+    <table class="tabla-pronosticos">
+        <tr>
+            <th>Mensual</th> 
+            <th>Cantidad</th>
+            <th>Pedidos</th>  
+        </tr>
+        <?php for ($i = $mesInicio, $j = 0; $i <= $mesFinal; $i++, $j++) { ?>
+            <tr>
+                <td class="meses"><?php echo $meses[$i] ?></td>
+                <td><?php echo $pronosticos[$j] ?></td>
+                <td><?php echo $pedidos[$j] ?></td>
+            </tr>
+        <?php } ?>
+    </table>
+</div>
+

@@ -30,7 +30,7 @@ h1 {
     border-radius: 8px;
     padding: 10px;
     box-shadow: -5px 3px 10px rgba(0, 0, 0, 0.201);
-    background: rgb(115, 236, 234);
+    background: rgba(219, 248, 247, 0.505);
 }
 
 /* Animación para el contenedor */
@@ -117,6 +117,7 @@ button:hover {
     padding: 10px;
     border: 1px solid rgba(0, 0, 0, 0.512);
     border-radius: 4px;
+    font-size: 1.1rem;
 
     &::placeholder{
         font-size: 1rem;
@@ -126,7 +127,7 @@ button:hover {
 }
 
 .contenido .periodos #form-datos label{
-    color: rgb(8, 168, 133);
+    color: rgb(15, 18, 17);
     font-size: 1.1rem;
     font-weight: bold;
 }
@@ -194,6 +195,8 @@ button:hover {
 .contenido .datos-container #formulario-datos table input{
     padding: 10px;
     width: 100px;
+    text-align: center;
+    font-size: 1.2rem;
     border: 1px solid rgba(0, 0, 0, 0.512);
     border-radius: 4px;
 }
@@ -219,3 +222,164 @@ button:hover {
     }
 }
 
+
+
+
+
+
+
+
+/* STYLES PARA LA TABLA DE RESULTADOS  */
+.contenido .tabla{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contenido .tabla h1{
+    color: blue;
+}
+
+.contenido .tabla .datosEntrada{
+    display: flex;
+}
+
+.contenido .tabla .datosEntrada .inventario-inicial1 {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    width: 250px;
+    background: orange;
+    font-size: 1.1rem;
+}
+
+.contenido .tabla .datosEntrada .lote1{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    width: 250px;
+    background: rgb(0, 255, 13);
+    font-size: 1.1rem;
+}
+
+.contenido .tabla .datosEntrada .inventario-inicial2, .lote2{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    width: 50px;
+    font-size: 1.1rem;
+}
+
+.contenido .tabla table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+.contenido .tabla table .tipo-periodo{
+    background: #1b3bdc;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.contenido .tabla table .periodos{
+    background: #3498db;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.contenido .tabla table th{
+    border: 1px solid #9c9a9aad;
+    text-align: center;
+    padding: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.contenido .tabla table td{
+    border: 1px solid #9c9a9aad;
+    text-align: center;
+    padding: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+/* .contenido .tabla tr:nth-child(even) {
+    background-color: yellow;
+} */
+
+.contenido .tabla table td.numeros {
+    transition: background-color 0.3s ease-in-out;
+}
+
+.contenido .tabla table #invenInicial{
+    background: orange;
+}
+
+.contenido .tabla table .numeros{
+    background: rgba(147, 245, 189, 0.586);
+}
+
+.contenido .tabla table .mps0{
+    background: white;
+}
+
+.contenido .tabla table .mps1{
+    background: rgb(0, 255, 13);
+}
+
+
+.contenido .tabla table td:hover {
+    background-color: yellow;
+}
+
+
+
+
+
+
+
+
+.contenido .periodos-pedidos{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin-top: 3.5rem;
+}
+
+.contenido .periodos-pedidos .pronosticos{
+    width: 430px;
+    padding: 10px;
+    text-align: center;
+    background-color: #3498db;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.contenido .periodos-pedidos .tabla-pronosticos{
+    width: 450px;
+    text-align: center;
+}
+
+.contenido .periodos-pedidos .tabla-pronosticos th{
+    font-size: 1.2rem;
+    padding: 10px;
+    background: #c6c6c6;
+    border: 1px solid rgba(0, 0, 0, 0.279);
+}
+
+.contenido .periodos-pedidos .tabla-pronosticos td{
+    font-size: 1.1rem;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.279);
+}
+
+.contenido .periodos-pedidos .tabla-pronosticos .meses{
+    background: rgb(252, 101, 46);
+    font-size: 1.1rem;
+    font-weight: bold;
+}

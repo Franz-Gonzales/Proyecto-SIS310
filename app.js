@@ -59,15 +59,32 @@ function llenarDatos() {
 
 
 
+// function calcularResultado() {
+//     var contenido = document.getElementById("contenido");
+//     var formulario = document.getElementById("formulario-datos");
+//     var parametros = new FormData(formulario);
+
+//     fetch("./Public/tabla_resultado.php", { method: "POST", body: parametros })
+//       .then((response) => response.text())
+//       .then((data) => (contenido.innerHTML = data));
+// }
+
+
 function calcularResultado() {
     var contenido = document.getElementById("contenido");
     var formulario = document.getElementById("formulario-datos");
     var parametros = new FormData(formulario);
-  
+
     fetch("./Public/tabla_resultado.php", { method: "POST", body: parametros })
       .then((response) => response.text())
-      .then((data) => (contenido.innerHTML = data));
+      .then((data) => {
+        contenido.innerHTML = data;
+        contenido.style.padding = "30px";
+        contenido.style.borderRadius = "10px";
+        contenido.style.backgroundColor = "rgba(208, 253, 253, 0.349)";
+      });
 }
+
 
 
 

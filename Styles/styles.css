@@ -1,0 +1,221 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1 {
+    color: #3498db;
+    text-align: center;
+}
+
+.contenido .datos {
+    width: 500px;
+    margin-top: 20px;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: -5px 3px 10px rgba(0, 0, 0, 0.201);
+    background: rgb(115, 236, 234);
+}
+
+/* Animación para el contenedor */
+.contenido {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.contenido .datos label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para el botón */
+button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* STYLES PERIODOS  */
+.contenido .periodos{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contenido .periodos h1{
+    color: blue;
+}
+
+.contenido .periodos #form-datos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 18px;
+    box-shadow: -5px 3px 18px rgba(0, 0, 0, 0.405);
+    border-radius: 10px;
+}
+
+.contenido .periodos #form-datos input{
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.512);
+    border-radius: 4px;
+
+    &::placeholder{
+        font-size: 1rem;
+        font-style: italic;
+    }
+
+}
+
+.contenido .periodos #form-datos label{
+    color: rgb(8, 168, 133);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.contenido .periodos #form-datos .btn_enviar{
+    background: rgb(52, 166, 219);
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+
+    &:hover{
+        background: blue;
+        transition: 0.25s;
+        transform: translate(1.1);
+    }
+}
+
+
+
+
+
+
+
+
+
+/* STYLES PARA FORMULARIO DATOS  */
+.contenido .datos-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contenido .datos-container h1{
+    color: blue;
+    font-size: 1.4rem;
+}
+
+.contenido .datos-container #formulario-datos{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -5px 3px 15px rgba(0, 0, 0, 0.405);
+    border-radius: 10px;
+}
+
+.contenido .datos-container #formulario-datos table{
+    display: flex;
+    gap: 20px;
+}
+
+.contenido .datos-container #formulario-datos table th{
+    font-size: 1.2rem;
+    color: red;
+}
+
+.contenido .datos-container #formulario-datos table .meses{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.contenido .datos-container #formulario-datos table input{
+    padding: 10px;
+    width: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.512);
+    border-radius: 4px;
+}
+
+.contenido .datos-container #formulario-datos table th, td{
+    padding: 6px;
+}
+
+.contenido .datos-container #formulario-datos .resultados{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: rgb(52, 166, 219);
+    border-radius: 8px;
+    padding: 10px;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+
+    &:hover{
+        background: blue;
+        transition: 0.25s;
+        transform: translate(1.1);
+    }
+}
+

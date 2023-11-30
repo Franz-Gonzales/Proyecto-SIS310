@@ -2,8 +2,8 @@
 
     <?php
 
-    $mes1 = $_POST['mes1'];
-    $mes2 = $_POST['mes2'];
+    $periodoInicio = $_POST['periodoInicio'];
+    $periodoFinal = $_POST['periodoFinal'];
     $inventarioInicial = $_POST['inventarioInicial'];
     $lote = $_POST['lote'];
 
@@ -20,7 +20,7 @@
                     <th>Pronósticos</th>
                     <th>Pedidos</th>
                 </tr>
-                <?php for($i = $mes1; $i <= $mes2; $i++){ ?>
+                <?php for($i = $periodoInicio; $i <= $periodoFinal; $i++){ ?>
                     <tr>
                         <td class="meses"><?php echo $mensual[$i]; ?></td>
                         <td><input type="number" name="pronosticos[]"></td>
@@ -31,7 +31,7 @@
             <input type="submit" value="Calcular Resultado" class="resultados">
             <input type="hidden" name="inventarioInicial" value="<?php echo $inventarioInicial; ?>">
             <input type="hidden" name="lote" value="<?php echo $lote; ?>">
-            <input type="hidden" name="mes1" value="<?php echo $mes1; ?>">
-            <input type="hidden" name="mes2" value="<?php echo $mes2; ?>">
+            <input type="hidden" name="periodoInicio" value="<?php echo $periodoInicio; ?>">
+            <input type="hidden" name="periodoFinal" value="<?php echo $periodoFinal; ?>">
         </form>
     </div>

@@ -21,9 +21,9 @@
 
     <div class="periodos">
         <h1>Periodo Mensual</h1>
-        <form action="javascript:llenarDatos()" method="post" id="form-datos">
+        <form action="javascript:validar()" method="post" id="form-datos">
             <label for="mes1">Selecciones rango de periodos mensuales:</label>
-            <select name="mes1" id="mes1">
+            <select name="periodoInicio" id="periodoInicio">
                 <option value="">Inicio de Mes</option>
                 <?php
                 foreach ($mensual as $key => $mes) {
@@ -32,7 +32,7 @@
                 ?>
             </select>
 
-            <select name="mes2" id="mes2">
+            <select name="periodoFinal" id="periodoFinal">
                 <option value="">Mes Final</option>
                 <?php
                 foreach ($mensual as $key => $mes) {

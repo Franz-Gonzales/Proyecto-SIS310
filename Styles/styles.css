@@ -383,3 +383,88 @@ button:hover {
     font-size: 1.1rem;
     font-weight: bold;
 }
+
+.contenido .btn-inicio{
+    margin-top: 2.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+.contenido .inicio a{
+    width: 150px;
+}
+
+.contenido a .inicio{
+    padding: 10px 20px;
+    background-color: #49f9d0;
+    color: rgba(0, 0, 0, 0.748);
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+.contenido .inicio:hover {
+    background-color: #10d99a;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

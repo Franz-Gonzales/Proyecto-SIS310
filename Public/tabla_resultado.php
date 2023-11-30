@@ -1,8 +1,8 @@
 
 <?php
 
-$mesInicio = $_POST['mes1'];
-$mesFinal = $_POST['mes2'];
+$periodoInicio = $_POST['periodoInicio'];
+$periodoFinal = $_POST['periodoFinal'];
 $inventarioInicial = $_POST['inventarioInicial'];
 $lote = $_POST['lote'];
 
@@ -37,10 +37,9 @@ function calcularMPS($invenInicial, $pronostico, $pedido, $lote)
 $arrayMPS = array();
 $arrayInvFinal = array();
 
-$aux = $mesInicio;
-$aux2 = $mesFinal;
-$primerPeriodo = ($aux - $mesInicio) + 1;
-$ultimoPeriodo = $mesFinal - $mesInicio + 1;
+$aux = $periodoInicio;
+$primerPeriodo = ($aux - $periodoInicio) + 1;
+$ultimoPeriodo = $periodoFinal - $periodoInicio + 1;
 
 for ($i = $primerPeriodo; $i <= $ultimoPeriodo; $i++) {
 
@@ -62,10 +61,9 @@ for ($i = $primerPeriodo; $i <= $ultimoPeriodo; $i++) {
 //? CALCULO DE DPP PARA CADA PERIODO
 $arrayDPP = array();
 
-$aux = $mesInicio;
-$aux2 = $mesFinal;
-$primerPeriodo = ($aux - $mesInicio) + 1;
-$ultimoPeriodo = $mesFinal - $mesInicio + 1;
+$aux = $periodoInicio;
+$primerPeriodo = ($aux - $periodoInicio) + 1;
+$ultimoPeriodo = $periodoFinal - $periodoInicio + 1;
 
 for ($i = $primerPeriodo; $i <= $ultimoPeriodo; $i++) {
 
@@ -147,7 +145,7 @@ for ($i = $primerPeriodo; $i <= $ultimoPeriodo; $i++) {
     <table>
         <tr>
             <th>Mensual</th>
-            <?php for ($i = $mesInicio; $i <= $mesFinal; $i++) { ?>
+            <?php for ($i = $periodoInicio; $i <= $periodoFinal; $i++) { ?>
                 <th class="tipo-periodo"><?php echo $meses[$i] ?></th>
             <?php } ?>
         </tr>
@@ -207,7 +205,7 @@ for ($i = $primerPeriodo; $i <= $ultimoPeriodo; $i++) {
             <th>Cantidad</th>
             <th>Pedidos</th>  
         </tr>
-        <?php for ($i = $mesInicio, $j = 0; $i <= $mesFinal; $i++, $j++) { ?>
+        <?php for ($i = $periodoInicio, $j = 0; $i <= $periodoFinal; $i++, $j++) { ?>
             <tr>
                 <td class="meses"><?php echo $meses[$i] ?></td>
                 <td><?php echo $pronosticos[$j] ?></td>
@@ -215,5 +213,9 @@ for ($i = $primerPeriodo; $i <= $ultimoPeriodo; $i++) {
             </tr>
         <?php } ?>
     </table>
+</div>
+
+<div class="btn-inicio">
+    <a href="javascript:cargarContenido('mps.html')"><button class="inicio">Nuevo Cálculo MPS</button></a>
 </div>
 

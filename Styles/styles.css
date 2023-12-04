@@ -278,7 +278,7 @@ button:hover {
 }
 
 .contenido .tabla table .tipo-periodo{
-    background: #1b3bdc;
+    background: #10b1d9;
     color: white;
     font-size: 1.1rem;
 }
@@ -384,6 +384,14 @@ button:hover {
     font-weight: bold;
 }
 
+
+.contenido .periodos-pedidos .tabla-pronosticos .semana{
+    background: rgb(179, 246, 46);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+
 .contenido .btn-inicio{
     margin-top: 2.5rem;
     text-align: center;
@@ -407,7 +415,7 @@ button:hover {
 
 
 .contenido .inicio:hover {
-    background-color: #10d99a;
+    background-color: #2546e9;
 }
 
 
@@ -417,54 +425,22 @@ button:hover {
 
 
 
+/* STYLES PARA RESULTADO 1 */
+.contenido .tabla .mes{
+    background: rgb(46, 94, 252);
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.279);
+    width: 70%;
+    margin-left: 150px;
+    margin-top: 50px;
+    color: white;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.contenido .tabla table .pronosticos{
+    background: #f5cf38;
+}
 

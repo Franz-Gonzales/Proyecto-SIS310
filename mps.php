@@ -24,22 +24,6 @@ if(!isset($_SESSION['nombre'])){
     <script src="app.js"></script>
 </head>
 <body>
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="menu.html">Herramientas de Producción</a>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="./SIS310/index.html">Plan Maestro de Producción</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./SIS310/pareto.html">Diagrama de Pareto</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./SIS310/menu.html">Plan Maestro de Producción (MPS)</a>
-                </li>
-            </ul>
-        </div>
-    </nav> -->
     <div class="container" id="container">
         <h1>Plan Maestro de Producción (MPS)</h1>
         <div class="contenido" id="contenido">

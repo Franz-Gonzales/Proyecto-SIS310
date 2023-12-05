@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Maestro de Producción</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="menu.html">Herramientas de Producción</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Plan Maestro de Producción</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pareto.html">Diagrama de Pareto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../mps.html">Plan Maestro de Producción (MPS)</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="text-center mt-4">Plan Maestro de Producción</h1>
+        <form id="formulario">
+            <div class="tabla-container">
+                <h2>Ingrese los datos:</h2>
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Mes</th>
+                        <th>Demanda</th>
+                        <th>Días Laborables</th>
+                    </tr>
+                    <tr>
+                        <td>Enero</td>
+                        <td><input type="number" id="enero" name="enero" required></td>
+                        <td><input type="number" id="diasLaboralesEnero" name="diasLaborales" required></td>
+                    </tr>
+                    <tr>
+                        <td>Febrero</td>
+                        <td><input type="number" id="febrero" name="febrero" required></td>             
+                        <td><input type="number" id="diasLaboralesFebrero" name="diasLaborales" required></td>
+                    </tr>
+                    <tr>
+                        <td>Marzo</td>
+                        <td><input type="number" id="marzo" name="marzo" required></td>
+                        <td><input type="number" id="diasLaboralesMarzo" name="diasLaborales" required></td>
+                    </tr>
+                    <tr>
+                        <td>Abril</td>
+                        <td><input type="number" id="abril" name="abril" required></td>
+                        <td><input type="number" id="diasLaboralesAbril" name="diasLaborales" required></td>
+                    </tr>
+                    <tr>
+                        <td>Mayo</td>
+                        <td><input type="number" id="mayo" name="mayo" required></td>
+                        <td><input type="number" id="diasLaboralesMayo" name="diasLaborales" required></td>
+                    </tr>
+                    <tr>
+                        <td>Junio</td>
+                        <td><input type="number" id="junio" name="junio" required></td>
+                        <td><input type="number" id="diasLaboralesJunio" name="diasLaborales" required></td>
+                    </tr>                </table>
+            </div>
+            <div class="produccion-container">
+                <h2>Ingrese los datos de producción:</h2>
+                <div class="form-group">
+                    <label for="produccionPromedio">Producción promedio por trabajador (diario):</label>
+                    <input type="number" class="form-control" id="produccionPromedio" name="produccionPromedio" required>
+
+                    <label for="unidadHora">Horas de Trabajo para producir una unidad:</label>
+                    <input type="number" id="unidadHora" step=any name="unidadHora" required>
+
+                    <label for="trabajadores_disponibles">Trabajadores Disponibles (Primer Mes):</label>
+                    <input type="number" id="trabajadores_disponibles" name="trabajadores_disponibles" required>
+                  
+                    <label for="costoManoObra">Costo de Mano de Obra</label>
+                    <input type="number" id="costoManoObra" name="costoManoObra" required>
+                  
+                    <label for="costoContratar">Costo de Contratar:</label>
+                    <input type="number" id="costoContratar" name="costoContratar" required>
+                  
+                    <label for="costoDespedir">Costo de despedir</label>
+                    <input type="number" id="costoDespedir" name="costoDespedir" required>
+                  
+                    <label for="costoAlmacenar">Costo de Almacenar:</label>
+                    <input type="number" id="costoAlmacenar" name="costoAlmacenar" required>
+                  
+                    <label for="costoFaltante">Costo de faltante:</label>
+                    <input type="number" id="costoFaltante" name="costoFaltante" required>
+                  
+                    <label for="horasJornadaL">Horas jornada Laboral:</label>
+                    <input type="number" id="horasJornadaL" name="horasJornadaL" required>                </div>
+                <input type="submit" class="btn btn-primary" value="Calcular Plan">
+            </div>
+        </form>
+    </div>
+    <div id="resultados-tabla"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

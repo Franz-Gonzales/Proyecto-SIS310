@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Diagrama de Pareto</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/pareto.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="menu.html">Herramientas de Producción</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Plan Maestro de Producción</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pareto.html">Diagrama de Pareto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../mps.html">Plan Maestro de Producción (MPS)</a>
+        </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">Diagrama de Pareto</h1>
+      <p class="text-justify">
+        El diagrama de Pareto es una herramienta de análisis utilizada para la
+        toma de decisiones. Está basado en el principio de Pareto, también
+        conocido como la regla del 80/20, que sugiere que el 80% de los efectos
+        son el resultado del 20% de las causas. Este gráfico ayuda a identificar
+        las causas más significativas que deben ser atendidas con prioridad. Las
+        barras representan la importancia de cada factor, y la línea muestra el
+        porcentaje acumulativo. La interpretación de este gráfico permite
+        focalizar los esfuerzos en los factores más críticos.
+      </p>
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <div class="form-group">
+            <label for="categoryCount">Cantidad de Categorías:</label>
+            <input
+              type="number"
+              id="categoryCount"
+              class="form-control"
+              min="1"
+              placeholder="Ej: 5"
+            />
+            <button onclick="createInputFields()" class="btn btn-primary mt-2">
+              Generar Campos
+            </button>
+          </div>
+          <div id="dataInputsTable" class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Categoría</th>
+                  <th>Valor</th>
+                </tr>
+              </thead>
+              <tbody id="dataInputs"></tbody>
+            </table>
+          </div>
+          <button onclick="generatePareto()" class="btn btn-success mt-2">
+            Generar Pareto
+          </button>
+          <!-- Botones para seleccionar el tipo de gráfico -->
+          <button class="chart-btn" data-charttype="line">Línea</button>
+          <button class="chart-btn" data-charttype="bar">Barras</button>
+          <button class="chart-btn" data-charttype="radar">Radar</button>
+          <button class="chart-btn" data-charttype="doughnut">Dona</button>
+          <button class="chart-btn" data-charttype="pie">Pastel</button>
+          <button class="chart-btn" data-charttype="polarArea">Área Polar
+          </button>
+
+          <div class="pareto-container">
+            <div>
+              <canvas id="paretoChart"> </canvas>
+            </div>
+          </div>
+          <div id="paretoTableContainer"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="pareto.js"></script>
+</html>

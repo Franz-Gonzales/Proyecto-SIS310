@@ -214,6 +214,6 @@ for ($i = $primerPeriodo; $i <= $ultimoPeriodo; $i++) {
 </div>
 
 <div class="btn-inicio">
-    <a href="javascript:cargarContenido('mps.html')"><button class="inicio">Nuevo Cálculo MPS</button></a>
+    <a href="javascript:cargarContenido('mps.php')"><button class="inicio">Nuevo Cálculo MPS</button></a>
 </div>
 

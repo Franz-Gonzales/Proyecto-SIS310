@@ -240,9 +240,7 @@ function mostrarMesAConcluir(){
     //mes_inicio, numero_semanas, semana_inicio
     var mes_concluido = 0;
     let result = 0;
-    // var semana_concluido = 0;
 
-    // console.log('mes_req -> ' + mes_req);
     if(numero_semanas % 4 !== 0 && mes_req !== 2){
         if(semana_inicio == 4){
             result = (mes_inicio + semana_inicio) + (mes_req - semana_inicio + 1);

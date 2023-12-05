@@ -1,0 +1,144 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e8e8e8; /* Color de fondo más oscuro */
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    margin-top: 36px;
+}
+h1, h2 {
+    color: #0077cc; /* Color azul para títulos */
+    text-align: center;
+}
+
+form {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    border: 1px solid #ccc; /* Borde sutil */
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.tabla-container, .produccion-container {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 50px;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #2F748C; /* Verde más brillante para la cabecera de la tabla */
+    color: white;
+    text-align: center;
+}
+
+input[type="number"], input[type="text"] {
+    width: 100%;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Esto asegura que el padding no afecte el ancho total */
+    font-size: 16px; /* Tamaño de fuente más grande para mejor legibilidad */
+    background-color: #f8f8f8; /* Un fondo ligeramente diferente para resaltar */
+}
+
+input[type="number"]:focus, input[type="text"]:focus {
+    border-color: #007bff; /* Cambia el color del borde al enfocar */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Sombra ligera para resaltar el input activo */
+    outline: none; /* Remueve el contorno predeterminado */
+}
+
+
+input[type="submit"] {
+    background-color: #2F748C; /* Azul para el botón de envío */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #005f6b; /* Color más oscuro al pasar el ratón por encima */
+}
+
+@media screen and (max-width: 800px) {
+    form {
+        flex-direction: column;
+    }
+    .tabla-container, .produccion-container {
+        flex: none;
+        width: 100%;
+    }
+}
+
+#resultados-tabla{
+    margin-top: 100px;
+    width: 90%;
+    margin-bottom: 100px;
+}
+#resultados {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff; /* Fondo blanco para la tabla */
+    color: #333; /* Texto oscuro para mejor legibilidad */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera para dar profundidad */
+}
+
+#resultados th, #resultados td {
+    border: 1px solid #ddd; /* Bordes sutiles para las celdas */
+    padding: 10px;
+    text-align: center;
+}
+
+#resultados th {
+    background-color: #f0f0f0; /* Color de fondo para los encabezados */
+    color: #333; /* Texto oscuro para los encabezados */
+}
+
+#resultados tr:nth-child(even) {
+    background-color: #f9f9f9; /* Un ligero color de fondo para las filas pares */
+}
+
+#resultados tr:hover {
+    background-color: #f1f1f1; /* Resaltar la fila al pasar el mouse */
+}
+
+#resultados .trab-necesarios {
+    background-color: #ffccbc; /* Fondo distinto para 'Trab. Necesarios' */
+}
+
+#resultados .trab-disponibles {
+    background-color: #bbdefb; /* Fondo distinto para 'Trab. Disponibles' */
+}
